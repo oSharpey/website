@@ -1,0 +1,6 @@
+[submodule "themes/hugo-shortcode-gallery"]
+	path = themes/hugo-shortcode-gallery
+	url = https://github.com/mfg92/hugo-shortcode-gallery
+[submodule "themes/re-terminal"]
+	path = themes/re-terminal
+	url = https://github.com/mirus-ua/hugo-theme-re-terminal
