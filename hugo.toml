@@ -7,15 +7,24 @@ cleanDestinationDir = true
 theme = ["re-terminal", "hugo-shortcode-gallery"]
 pagination.pagerSize = 5
 
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+
 
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
+  math = false
 
   # ["orange", "blue", "red", "green", "pink", "paper"]
   themeColor = "paper"
