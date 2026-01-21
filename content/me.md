@@ -3,7 +3,7 @@ title = "Me"
 +++
 Hi I’m Oscar, a 22 year old security researcher based in London who does photography on the side.
 
-<a href="mailto:oscar@0xsharpe.com" target="_blank">Email</a> | <a href="linkedin.com/in/oscar-sharpe-a68115253" target="_blank">LinkedIn</a> | <a href="https://x.com/0xsharpe" target="_blank">Twitter</a>
+<a href="mailto:oscar@0xsharpe.com" target="_blank">Email</a> | <a href="https://linkedin.com/in/oscar-sharpe-a68115253" target="_blank">LinkedIn</a> | <a href="https://x.com/0xsharpe" target="_blank">Twitter</a>
 
 ### Experience
 
