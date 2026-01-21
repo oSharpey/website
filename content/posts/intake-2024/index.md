@@ -50,6 +50,6 @@ It's as simple as running the tool with the beacon pulled from memory and you ge
 
 ![img](./images/parsed.png)
 
-```
+```text
 Intake24{**************}
 ```

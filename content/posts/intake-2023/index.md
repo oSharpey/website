@@ -25,7 +25,7 @@ First you'll need to convert the zip file into a hash so john can use it:
 
 This gives us this hash:
 
-```
+```text
 cutecats.zip/flag.txt:$pkzip$1*2*2*0*24*18*c2206e41*0*42*0*24*69aa*715fb84390b2bd3a3111e9b2f2901f08154305389e09f1a742b18cfa9a01252031350f10*$/pkzip$:flag.txt:cutecats.zip::cutecats.zip
 ```
 
@@ -35,7 +35,7 @@ You are then able to perform a dictionary attack on this hash using either john 
 
 Finally we can unzip the zip file with the password we just cracked. This gives us our flag:
 
-```
+```text
 Intake{************}
 ```
 &nbsp;
@@ -76,7 +76,7 @@ Converting the hex value to binary is easily done in python:
 This Gray Code binary can then be converted into normal binary either by hand, or by using an online converter (https://miniwebtool.com/gray-code-to-binary-converter/)
 
 This gives us the binary: 
-```
+```text
 1001001011011100111010001100001011010110110010101111011010001110111001000110100011110010110001100110000010001000011001101111101
 ```
 
@@ -95,7 +95,7 @@ We are provided with a PDF of a restaurant menu that looks rather odd.
 
 As this is a crypto challenge, and the food categories start with E, N and C we can deduce this must be an RSA public key and Ciphertext
 
-```
+```text
 n = 1754855759650743767503869076814946449161221988945131762860850650934071108812482091782335001129797246345434549300597877301537145147325064468164785608175471379078968621441495156606772561461558509057879621876000373425091440007085588096579926802504858667285971828686528584199545107883466940764934199625261666665931884490733946038296846835443564303448738988078440512324191145082259733656235195132033169599025641699987520612234682411135316700820536802549613720808179788357685065979943842888484188346443471888743404566343222752805220195244981753245299112164244421310576792854307658971133327513611085767555468854066669498201
 
 e = 65537
@@ -135,7 +135,7 @@ The core of the algorithm is to take a educated guess at *a*, say the square roo
 
 Below is a python solve script to caluclate *p* and *q* using this method, then calculate the private key and and decrypt the message (*You don't actually need to script this to solve this challenge, theres a great tool called [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool) that is able to also perform fermats factorisation method along with many other different RSA attacks. I just though it would nice to see whats actually happening under the hood*):
 
-```python
+{{< code language="python" title="Fermat's Factorization Method" id="1" expand="Show" collapse="Hide" isCollapsed="false" >}}
 from math import isqrt
 from Crypto.Util.number import inverse
 
@@ -165,10 +165,11 @@ d = inverse(e,phi_n)
 dec = bytes.fromhex(hex(pow(c,d,n))[2:]).decode("utf8")
 
 print(dec)
-```
+{{< /code >}}
+
 
 This then gives us 
-```
+```text
 pass:for_the_most_walk_the_bins
 ```
 
@@ -186,6 +187,6 @@ Galf appears to be some GPG encypted data, if you remeber before the RSA we decr
 
 After decryping galf with `$ gpg galf` we get the flag:
 
-```
+```text
 Intake{***********}
 ```
