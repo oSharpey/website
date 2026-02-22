@@ -8,7 +8,7 @@ Hi I’m Oscar, a 22 year old security researcher based in London who does photo
 ### Experience
 
 [CrowdStrike](https://www.crowdstrike.com/) \
-07/2024 - Present | Remote \
+07/2025 - Present | Remote \
 *Security Researcher*
 
 06/2024 - 09/2024 | Remote \
